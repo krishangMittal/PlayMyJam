@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">  
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>DJ Dashboard</h1>
+            <ul class="sidebar-menu">
+                <li>Song Requests</li>
+                <li>Share QR Code</li>
+                <li>Analytics</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h2>Song Requests Dashboard</h2>
+                <div class="btn-group">
+                    <button class="action-btn btn-primary">Start Session</button>
+                    <button class="action-btn btn-secondary">End Session</button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Requests</h3>
+                    <div class="stat-value" id="totalRequests">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Requests</h3>
+                    <div class="stat-value" id="pendingRequests">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed Requests</h3>
+                    <div class="stat-value" id="completedRequests">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Users</h3>
+                    <div class="stat-value" id="activeUsers">0</div>
+                </div>
+            </div>
+
+            <!-- QR Code Section -->
+            <div class="qr-section">
+                <h3>Share Request Link</h3>
+                <div class="qr-container" id="qrcode"></div>
+                <div class="request-url" id="requestUrl"></div>
+            </div>
+
+            <!-- Requests Table -->
+            <div class="requests-section">
+                <h3>Recent Requests</h3>
+                <table class="requests-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Song</th>
+                            <th>Artist</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestsList">
+                        <!-- Request rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
+

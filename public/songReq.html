@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Song</title>
+    <link rel="stylesheet" href="css/songReq.css">  
+
+</head>
+<body>
+    <div class="request-container">
+        <div class="header">
+            <h1>Request a Song</h1>
+            <p>Make your party request!</p>
+        </div>
+
+        <form id="requestForm">
+            <div class="form-group">
+                <label for="songName">Song Name</label>
+                <input type="text" id="songName" required placeholder="Enter song name">
+            </div>
+
+            <div class="form-group">
+                <label for="artistName">Artist Name</label>
+                <input type="text" id="artistName" required placeholder="Enter artist name">
+            </div>
+
+            <button type="submit">Submit Request</button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            Your request has been submitted!
+        </div>
+
+        <div class="request-status">
+            <p class="status-text">Your Recent Requests</p>
+            <div class="recent-requests" id="recentRequests">
+                <!-- Recent requests will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Ad Modal -->
+    <div class="modal" id="adModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h2>Quick Advertisement</h2>
+            <div class="ad-space">
+                Advertisement Space
+            </div>
+            <button id="continueBtn">Continue</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    </body>
+</html>
