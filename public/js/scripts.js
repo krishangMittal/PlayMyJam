@@ -48,10 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
         </tr>
     `).join('');
 
-    // In a real application, you would:
-    // 1. Connect to WebSocket for real-time updates
-    // 2. Implement proper session management
-    // 3. Add event handlers for all buttons
-    // 4. Add proper error handling
-    // 5. Implement proper state management
 });
